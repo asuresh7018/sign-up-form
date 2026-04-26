@@ -1,0 +1,113 @@
+:root {
+    font-size: 20px;
+    --left-width: 30vw;
+    --right-width: 70vw;
+    --prompt-height: 35vh;
+    --form-height: 30vh;
+    --accountseg-height: 35vh;
+    --banner-height: 15vh;
+    --right-side-padding: 40px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('Norsebold.otf');
+    font-weight: bold;
+}
+
+#logobanner, #bannerbackground {
+    background-color: black;
+    width: var(--left-width);
+    height: var(--banner-height);
+    display: flex;
+    flex-direction: row;
+    opacity: 0.6;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20%;
+    overflow: hidden;
+}
+
+#logobanner {
+    background-color: transparent;
+    opacity: 1;
+    font-family: 'Norse Bold', sans-serif;
+    font-weight: bold;
+}
+
+#credits {
+    position: absolute;
+    text-align: center;
+    height: 30px;
+    top: calc(100% - 15px);
+    width: var(--left-width);
+    color: white;
+    overflow: hidden;
+} 
+
+#logotext {
+    font-size: calc(0.5 * var(--banner-height));
+    color: white;
+}
+
+#logo {
+    height: 100%
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-side {
+    background-image: url("sidebar-background.jpg");
+    background-size: 100% 100%;
+    width: var(--left-width);
+    height: 100%
+}
+
+.right-side {
+    background-color: rgb(240,240,240);
+    width: var(--right-width);
+    height: 100%;
+    font-size: 1rem;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+#prompt {
+    height: var(--prompt-height);
+    width: 100%;
+    padding-left: var(--right-side-padding);
+}
+
+#formContent {
+    height: var(--form-height);
+    width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.2);
+    padding-left: var(--right-side-padding)
+}
+
+.italicised {
+    font-style: italic;
+}
+
+#accountSegment {
+    padding-left: var(--right-side-padding);
+    font-size: 0.8rem;
+}
