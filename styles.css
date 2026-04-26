@@ -7,7 +7,12 @@
     --accountseg-height: 35vh;
     --banner-height: 15vh;
     --right-side-padding: 40px;
+    --right-side-right-padding: 250px;
     box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
 }
 
 @font-face {
@@ -43,11 +48,12 @@
 #credits {
     position: absolute;
     text-align: center;
-    height: 30px;
-    top: calc(100% - 15px);
+    height: 40px;
+    top: calc(100% - 20px);
     width: var(--left-width);
     color: white;
     overflow: hidden;
+    font-size: clamp(8px, 5vh, 16px);
 } 
 
 #logotext {
@@ -97,7 +103,7 @@ body {
 
 #formContent {
     height: var(--form-height);
-    width: 100%;
+    width: calc(100%-40px);
     background-color: white;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
     box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.2);
@@ -112,6 +118,7 @@ body {
 }
 
 #accountSegment {
+    padding-top: 25px;
     padding-left: var(--right-side-padding);
     font-size: 0.8rem;
     font-weight: 200;
@@ -125,11 +132,16 @@ body {
     flex-wrap: wrap;
     gap: 5%;
     height: 75%;
-    font-weight: 200;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
 .fielddiv {
     display: flex;
     flex-direction: column;
     width: 40%;
+}
+
+#prompttext, #myForm {
+    padding-right: var(--right-side-right-padding);
 }
