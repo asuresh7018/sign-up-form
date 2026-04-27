@@ -30,27 +30,27 @@
             <form id="myForm" action="#" method="post">
                 <div id="placeholder1" class="fielddiv">
                     <label for="placeholder1" name="placeholder1">First Name</label>
-                    <input type="text" id="input1">
+                    <input type="text" id="input1" required>
                 </div>
                 <div id="placeholder2"class="fielddiv">
                     <label for="placeholder2" name="placeholder2">Last Name</label>
-                    <input type="text" id="input2">
+                    <input type="text" id="input2" required>
                 </div>
                 <div id="placeholder3"class="fielddiv">
                     <label for="placeholder3" name="placeholder3">Email</label>
-                    <input type="text" id="input3">
+                    <input type="email" id="input3" required>
                 </div>
                 <div id="placeholder4"class="fielddiv">
                     <label for="placeholder4" name="placeholder4">Phone Number</label>
-                    <input type="text" id="input4">
+                    <input type="text" id="input4" required>
                 </div>
                 <div id="placeholder5"class="fielddiv">
                     <label for="placeholder5" name="placeholder5">Password</label>
-                    <input type="text" id="input5">
+                    <input type="password" id="input5" required>
                 </div>
                 <div id="placeholder6"class="fielddiv">
                     <label for="placeholder6" name="placeholder6">Confirm Password</label>
-                    <input type="text" id="input6">
+                    <input type="password" id="input6" required>
                 </div>
             </form>
         </div>
@@ -58,7 +58,7 @@
             <div id="createAccount"></div>
             <button type="submit" form="myForm" id="createButton">Create Account</button>
             <p></p>
-            <div id="alreadyHaveAccount">Already have an account? Log in</div>
+            <div id="alreadyHaveAccount">Already have an account? <a href="#">Log in</a></div>
         </div>
     </div>
 

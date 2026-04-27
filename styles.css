@@ -1,13 +1,16 @@
 :root {
     font-size: 20px;
-    --left-width: 30vw;
-    --right-width: 70vw;
+    --left-width: 40vw;
+    --right-width: 60vw;
     --prompt-height: 35vh;
-    --form-height: 30vh;
-    --accountseg-height: 35vh;
-    --banner-height: 15vh;
+    --form-height: 35vh;
+    --accountseg-height: 30vh;
+    --banner-height: 25vh;
     --right-side-padding: 40px;
-    --right-side-right-padding: 250px;
+    --right-side-right-padding: 100px;
+}
+
+* {
     box-sizing: border-box;
 }
 
@@ -99,6 +102,10 @@ body {
     height: var(--prompt-height);
     width: 100%;
     padding-left: var(--right-side-padding);
+    font-size: clamp(6px, 2vw, 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 #formContent {
@@ -111,6 +118,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: #333;
 }
 
 .italicised {
@@ -130,9 +140,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 10%;
     height: 75%;
-    font-weight: 500;
+    font-weight: 700;
+    color: #555;
     letter-spacing: 2px;
 }
 
@@ -144,4 +155,52 @@ body {
 
 #prompttext, #myForm {
     padding-right: var(--right-side-right-padding);
+    padding-bottom: 20px;
+}
+
+input {
+    padding-left: 5px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 1.5rem;
+}
+
+input:user-invalid {
+    border-color: rgba(200,50,50,1)
+}
+
+input:focus {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+button {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(50,100,0);
+}
+
+#alreadyHaveAccount {
+    font-weight: 400;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(50,100,0);
+    border: none;
+    width: 30%;
+    height: 2.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
 }
